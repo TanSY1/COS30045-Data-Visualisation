@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Your name here"/>
+
+	<title>Task 1.1 HTML and CSS Demo Page</title>
+	<!--Insert description of exercise  -->
+
+	<style>
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Drawing Shape with SVG</h1>
+
+	<svg width="500" height="60" style="background-color:slategrey;">
+
+		<g transform="translate(20, 0)">
+			<circle cx="25", cy="30", r="25" fill="cornflowerblue"/>
+			<rect x="50", y="5", width="50", height="50" fill="rgb(100, 149, 237)"/>
+			<ellipse cx="140" cy="30" rx="40" ry="25"
+			 
+			fill="rgba(100, 149, 237, 0.5)"/>
+			<Line x1="0" y1="30" x2="180" y2="30" stroke="black"
+			stroke-width="5"/>
+		</g>
+
+
+	</svg>
+	<br>
+
+	<svg width="500" height="100" style="background-color:slategrey;">
+
+		<g>
+			<rect x="0", y="25", width="50", height="50" fill="rgb(100, 149, 237)"transform="translate(20, 0)" />
+			<rect x="50", y="5", width="50", height="40" fill="rgb(100, 149, 237)" transform="translate(30, 30)"/>
+			<rect x="50", y="5", width="50", height="30" fill="rgb(100, 149, 237)" transform="translate(90, 40)"/>
+			<rect x="50", y="5", width="50", height="20" fill="rgb(100, 149, 237)" transform="translate(160, 50)"/>
+			<rect x="50", y="5", width="50", height="10" fill="rgb(100, 149, 237)" transform="translate(230, 60)"/>
+			<rect x="50", y="5", width="50", height="5" fill="rgb(100, 149, 237)" transform="translate(300, 65)"/>
+		</g>
+	</svg>
+	<br>
+
+	<a href="../MainPage.html">
+		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Home</button>
+	</a>
+
+	<a href="lab1-1.html">
+		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab1.1</button>
+	</a>	
+	
+	<a href="lab1-2.html">
+		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab1.2</button>
+	</a>
+
+	<footer style="color:grey">COS30045 Data Visualisation<br>
+			Joe Bloggs</footer>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="stylesheet.css"/>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Your name here"/>
+
+	<title>Task 1.1 HTML and CSS Demo Page</title>
+	<!--Insert description of exercise  -->
+
+	<style>
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Introduction of a pet into their household during the pandemic in Australia</h1>
+	<h2>Pets and the Pandemic</h2>
+
+	<p>
+		A report from <b>Animal Medicines Australia (AMA)</b> has found that many Australians took the opportunity to introduce a pet into their household during the pandemic. Their survey indicated that there was a significant increase in the percent of households taking in a new dog, fish or bird. Their research also indicated that pets had a number of positive influences on their lives such as:
+	</p>
+
+	<ul>
+		<li>companionship</li>
+		<li>better mental health</li>
+		<li>joy and happiness</li>
+	</ul>
+
+
+	<button class="button1" onclick="show('pets2019.png','Fig 1.Percent of most popular pet owned by Australians in 2019','int2019')">2019</button>
+
+	<button class="button2" onclick="show('pets2021.png','Fig 2. Percent of most popular pet owned by Australians in 2021','int2021')">2021</button>
+
+	<button class="button3" onclick="show('pets2019_2021.png',' Fig3. Percent of most popular pet owned by Australians in 2019 and 2021','int2019/2021')">Both</button>
+
+	<figure>
+		<img id="ChartImg" style="width:50%" style="display:none">
+		<figcaption id="ChartCap"></figcaption>
+	</figure>
+
+	<script>
+		function show(Image,ImgDesc,ImgAlt){
+			document.getElementById('ChartImg').src=Image
+			document.getElementById('ChartImg').alt=ImgAlt
+			document.getElementById('ChartCap').innetHTML=ImgDesc
+			document.getElementById('ChartImg').style.display='block';
+		}
+	</script>
+
+	<p>
+		With the increase in pet ownership the AMA are encouraging policy makers to consider the needs of companion animals and their owners when considering rental, strata and body corporate regulations are well as accepting animals in public places and transport.
+	</p>
+
+	<a href="../MainPage.html">
+		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Home</button>
+	</a>
+
+	<a href="lab1-1.html">
+		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab1.1</button>
+	</a>	
+	
+	<a href="lab1-3.html">
+		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab1.3</button>
+	</a>
+
+	<footer>COS30045 Data Visualisation</footer>
+
+</body>
+</html>

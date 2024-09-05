@@ -7,20 +7,20 @@
 	<meta name="keywords"		  content="HTML, CSS"/>
 	<meta name="author"			  content="Your name here"/>
 
-	<title>Task 2.1 D3 Data Binding</title>
+	<title>Task 2.3 D3 Drawing with Data - Scatter Plot</title>
 	<script src="https://d3js.org/d3.v7.min.js"></script>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
-<body>
+<body style="background-color:  rgb(164, 224, 233);">
 
-	<h1>Drawing with Data</h1>
-
+	<h1>Drawing with Data - Scatter Plot</h1>
+	<br>
 	<script>
 
 	var w = 600;
-	var h = 100;
+	var h = 150;
 
 	//var dataset = [14, 5, 26, 23, 9];
 	//var dataset = [14, 5,26,23,9,10,28,3,7,13]
@@ -57,42 +57,109 @@
 		.attr("fill", "slategrey");
 
 	svg.selectAll("text")
-	.data(dataset)
-	.enter()
-	.append("text")
-	.text(function(d){
-		return d[0] + "," + d[1];
-	})
-	.attr("x", function(d){
-		return d[0] + 10;
-	})
-	.attr("y", function(d){
-		return d[1]-2;
-	});
+		.data(dataset)
+		.enter()
+		.append("text")
+		.text(function(d){
+			return d[0] + "," + d[1];
+		})
+		.attr("x", function(d){
+			return d[0] + 10;
+		})
+		.attr("y", function(d){
+			return d[1];
+		});
 
 	</script>
+
 	<br>
+	<br>
+
+	<script>
+
+		var w = 600;
+		var h = 150;
+	
+		//var dataset = [14, 5, 26, 23, 9];
+		//var dataset = [14, 5,26,23,9,10,28,3,7,13]
+		var dataset = [
+						[5, 20, 5],
+						[480, 90, 6.5],
+						[250, 50, 10],
+						[100, 33, 5],
+						[330, 95, 8],
+						[410, 12, 3],
+						[475, 44, 11],
+						[25, 67, 5],
+						[85, 21, 5],
+						[220, 88, 10]
+						];
+		
+		var svg = d3.select("body")
+					.append("svg")
+					.attr("width", w)
+					.attr("height", h)
+			
+		svg.selectAll("circle")
+			.data(dataset)
+			.enter()
+			.append("circle")
+			.attr("cx", function(d, i){
+				return d[0];
+			})
+			.attr("cy", function(d){
+				return d[1];
+			})
+			.attr("r", function(d){
+				return d[2];
+			})
+			.attr("fill", "#81BE83");
+	
+		svg.selectAll("text")
+			.data(dataset)
+			.enter()
+			.append("text")
+			.text(function(d){
+				return d[0] + "," + d[1];
+			})
+			.attr("x", function(d){
+				return d[0] + 10;
+			})
+			.attr("y", function(d){
+				return d[1];
+			});
+	
+		</script>
 	<bf></bf>
 	
-	<a href="../MainPage.html">
-		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Home</button>
+	<hr style="border: 1px solid">
+
+	<a style="text-decoration: none;" href="../MainPage.html">
+		<button style="font-size:20px; background-color:rgb(174, 196, 238); border-radius: 10px; cursor: pointer;">
+			Home</button>
 	</a>
 
-	<a href="lab2-1.html">
-		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab2.1</button>
+	<a style="text-decoration: none;" href="lab2-1.html">
+		<button style="font-size:20px; background-color:rgb(174, 196, 238); border-radius: 10px; cursor: pointer;">
+			Lab2.1</button>
 	</a>	
 	
-	<a href="lab2-2.html">
-		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab2.2</button>
+	<a style="text-decoration: none;" href="lab2-2.html">
+		<button style="font-size:20px; background-color:rgb(174, 196, 238); border-radius: 10px; cursor: pointer;">
+			Lab2.2</button>
 	</a>
 
-	<a href="lab2-4.html">
-		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab2.4</button>
+	<a style="text-decoration: none;" href="lab2-4.html">
+		<button style="font-size:20px; background-color:rgb(174, 196, 238); border-radius: 10px; cursor: pointer;">
+			Lab2.4</button>
 	</a>
 
-	<footer class="w3-panel w3-yellow">
+	<br>
+	<br>
+
+	<footer style="text-align: center; padding: 20px;background-color: #6ed6ff; border-top: 2px dotted;">
 		COS30045 Data Visualisation<br>
-		</footer>
+		Tan Shan Yan</footer>
 
 </body>
 </html>

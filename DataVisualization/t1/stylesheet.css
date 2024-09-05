@@ -1,9 +1,39 @@
-body
-{
+body{
     background-color:  powderblue;
 }
 
-h1
-{
+h1{
     color: blue
+}
+
+.button1{
+    background-color: rgb(221, 161, 236);
+}
+
+.button2{
+    background-color: rgb(246, 215, 255);
+}
+
+.button3{
+    background-color: rgb(240, 155, 77);
+}
+
+.nav{
+    font-size:20px; 
+    background-color:rgb(174, 196, 238); 
+    border-radius: 10px; 
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #6ed6ff;
+    border-top: 2px dotted;
+    margin-top: auto;  
+    width: 100%;
 }

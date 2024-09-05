@@ -7,20 +7,20 @@
 	<meta name="keywords"		  content="HTML, CSS"/>
 	<meta name="author"			  content="Your name here"/>
 
-	<title>Task 2.1 D3 Data Binding</title>
+	<title>Task2 .2 D3 Drawing with Data - Bar Chart</title>
 	<script src="https://d3js.org/d3.v7.min.js"></script>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
-<body>
+<body style="background-color:  rgb(164, 224, 233);">
 
-	<h1>Drawing with Data</h1>
+	<h1>Drawing with Data - Bar Chart</h1>
 
 	<script>
 
 	var w = 500;
-	var h = 100;
+	var h = 150;
 	var barPadding = 3;
 
 	//var dataset = [14, 5, 26, 23, 9];
@@ -57,35 +57,44 @@
 	})
 	.attr("fill", "black")
 	.attr("x", function(d, i){
-		return i * (w/dataset.length) + 25;
+		return i * (w/dataset.length) + 17;
 	})
 	.attr("y", function(d){
-		return h-(d*4)
+		return h-(d*4)-2;
 	});
 
 	</script>
 	<br>
 	<bf></bf>
 	
-	<a href="../MainPage.html">
-		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Home</button>
+	<hr style="border: 1px solid">
+
+	<a style="text-decoration: none;" href="../MainPage.html">
+		<button style="font-size:20px; background-color:rgb(174, 196, 238); border-radius: 10px; cursor: pointer;">
+			Home</button>
 	</a>
 
-	<a href="lab2-1.html">
-		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab2.1</button>
+	<a style="text-decoration: none;" href="lab2-1.html">
+		<button style="font-size:20px; background-color:rgb(174, 196, 238); border-radius: 10px; cursor: pointer;">
+			Lab2.1</button>
 	</a>	
 	
-	<a href="lab2-3.html">
-		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab2.3</button>
+	<a style="text-decoration: none;" href="lab2-3.html">
+		<button style="font-size:20px; background-color:rgb(174, 196, 238); border-radius: 10px; cursor: pointer;">
+			Lab2.3</button>
 	</a>
 
-	<a href="lab2-4.html">
-		<button style="font-size:20px; background-color:rgb(182, 150, 233); border-radius: 20px;">Lab2.4</button>
+	<a style="text-decoration: none;" href="lab2-4.html">
+		<button style="font-size:20px; background-color:rgb(174, 196, 238); border-radius: 10px; cursor: pointer;">
+			Lab2.4</button>
 	</a>
 
+	<br>
+	<br>
 
-	<footer style="color:grey">COS30045 Data Visualisation<br>
-		</footer>
+	<footer style="text-align: center; padding: 20px;background-color: #6ed6ff; border-top: 2px dotted;">
+		COS30045 Data Visualisation<br>
+		Tan Shan Yan</footer>
 
 </body>
 </html>

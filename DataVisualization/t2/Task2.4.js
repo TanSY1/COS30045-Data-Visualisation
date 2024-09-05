@@ -4,6 +4,7 @@ function init(){
         wombatSightings = data;
 
         barChart(wombatSightings);
+        barChart1(wombatSightings);
     })
 
     var w = 600
@@ -15,6 +16,7 @@ function init(){
                 .attr("width", w)
                 .attr("height", h);
 
+    
     function barChart(wombatSightings)
     {
         svg.selectAll("rect")
@@ -46,11 +48,56 @@ function init(){
         })
         .attr("fill", "black")
         .attr("x", function(d,i){
-            return i * (w/wombatSightings.length) + 10.5;
+            return i * (w/wombatSightings.length)+16;
         })
         .attr("y", function(d){
-            return h-(d.wombats*4)
+            return h-(d.wombats*4);
         })
     }
+
+    var svg1 = d3.select("#chart1")
+    .append("svg")
+    .attr("width", w)
+    .attr("height", h);
+
+
+    function barChart1(wombatSightings)
+    {
+        svg1.selectAll("rect")
+        .data(wombatSightings)
+        .enter()
+        .append("rect")
+        .attr("x", function(d, i){
+            return i * (w/wombatSightings.length);
+        })
+        .attr("y", function(d){
+            return h - (d.wombats*4);
+        })
+        .attr("width", function(d){
+            return (w/wombatSightings.length-barPadding);
+        })
+        .attr("height", function(d){
+            return d.wombats*4;
+        })
+        .attr("fill", function(d){
+            return "rgb(127, 255, " + (d.wombats * 8-20) +")";
+        });
+
+        svg1.selectAll("text")
+        .data(wombatSightings)
+        .enter()
+        .append("text")
+        .text(function(d){
+            return d.wombats;
+        })
+        .attr("fill", "black")
+        .attr("x", function(d,i){
+            return i * (w/wombatSightings.length)+16;
+        })
+        .attr("y", function(d){
+            return h-(d.wombats*4)+13;
+        })
+    }
+
 }
 window.onload = init;

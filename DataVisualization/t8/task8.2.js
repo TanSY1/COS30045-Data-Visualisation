@@ -21,6 +21,9 @@ function init(){
                 .attr("height", h)
                 .attr("fill", "grey");
 
+    var tooltip = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
     d3.csv("VIC_LGA_unemployment.csv").then(function(data){
         color.domain([
             d3.min(data, function(d) {return d.unemployed; }),
@@ -73,17 +76,27 @@ function init(){
                         .attr("cy", function(d) {
                             return projection([d.lon, d.lat])[1];
                         })
-                        .attr("r", function(d){
-                            return Math.sqrt(parseInt(d.population)) * 0.02;
-                        })
+                        .attr("r", 5)
+                        // .attr("r", function(d){
+                        //     return Math.sqrt(parseInt(d.population)) * 0.02;
+                        // })
                         
                         .style("fill", "yellow")
                         .style("stroke", "gray")
                         .style("stroke-width", 0.25)
                         .style("opacity", 0.75)
-                        .append("title")
-                        .text(function(d) {
-                            return d.place + ": Pop. " + formatAsThousands(d.population);
+                        .on("mouseover", function(event, d) {
+                            tooltip.transition()
+                                .duration(200)
+                                .style("opacity", .9);
+                            tooltip.html(d.place)
+                                .style("left", (event.pageX + 5) + "px")
+                                .style("top", (event.pageY - 28) + "px");
+                        })
+                        .on("mouseout", function(d) {
+                            tooltip.transition()
+                                .duration(500)
+                                .style("opacity", 0);
                         });
                     
                 });

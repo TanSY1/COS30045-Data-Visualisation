@@ -9,6 +9,8 @@
 
 	<title>Task 7.3 D3 Stacked Bar Chart</title>
 	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
@@ -17,9 +19,13 @@
 
 	<h1>Stacked Bar Chart</h1>
 
-	<p id="stackedbarchart"></p>
+	<!-- Create a div where the graph will take place -->
+	<div>
+		<svg id="my_dataviz2" height=300 width=450></svg>
+  	</div>
 
-	<br>
+	<p id="stackedbarchart"></p>
+	
 
 	<script src="task7.3.js"></script>
 	<br>
